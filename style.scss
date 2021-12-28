@@ -1,0 +1,13 @@
+$gray-300: #e9ecef;
+$blue-300: #0d6efd;
+a {
+  text-decoration: none;
+}
+.hovering_btn {
+  &:hover {
+    background-color: $gray-300;
+  }
+  &:active {
+    color: $blue-300;
+  }
+}

@@ -38,10 +38,10 @@ function displayCard(job) {
             <img src="./image/${element.image}" alt="" width="75px">
         </a>
     </header>
-    <div class="job__reacts d-flex align-items-center ps-3 text-secondary">
-        <button class="btn btn text-secondary "> <i class="far fa-bookmark"></i> Save</button>
-        <button class="btn btn text-secondary"> <i class="fas fa-share"></i> Share</button>
-        <button class="btn btn text-secondary"> <i class="far fa-eye-slash"></i> Hide</button>
+    <div class="job__reacts d-flex align-items-center ps-3 mt-1 text-secondary">
+        <button class="btn   text-secondary hovering_btn"> <i class="far fa-bookmark"></i> Save</button>
+        <button class="btn   text-secondary hovering_btn"> <i class="fas fa-share"></i> Share</button>
+        <button class="btn   text-secondary hovering_btn"> <i class="far fa-eye-slash"></i> Hide</button>
 
     </div>
 </div>
