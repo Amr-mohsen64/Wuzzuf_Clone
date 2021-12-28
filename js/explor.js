@@ -1,7 +1,8 @@
 var ListOfJob = document.getElementById("listOfJobs");
+var listSaved = document.getElementById("listSaved");
 var newreq = new XMLHttpRequest();
 
-newreq.open("GET", "./job.json");
+newreq.open("GET", "../job.json");
 
 newreq.addEventListener("readystatechange", function () {
   if (newreq.readyState === 4 && newreq.status === 200) {
@@ -11,8 +12,8 @@ newreq.addEventListener("readystatechange", function () {
   }
 });
 
-function displayCard(job) {
-  job.forEach((element) => {
+function displayCard(jobData) {
+  jobData.forEach((element) => {
     ListOfJob.innerHTML += `  
     <div class="job__detail bg-body card bx-1 bt-1 mb-3">
     <header class="job__description d-flex justify-content-between border-bottom mx-2 pb-2">
@@ -35,11 +36,12 @@ function displayCard(job) {
             </div>
         </div>
         <a href="#company" class="mt-4">
-            <img src="./image/${element.image}" alt="" width="75px">
+            <img src="../image/${element.image}" alt="" width="75px">
         </a>
     </header>
     <div class="job__reacts d-flex align-items-center ps-3 mt-1 text-secondary">
-        <button class="btn   text-secondary hovering_btn"> <i class="far fa-bookmark"></i> Save</button>
+        <button class="btn   text-secondary hovering_btn"> <i class="far fa-bookmark"></i> 
+           Save</button>
         <button class="btn   text-secondary hovering_btn"> <i class="fas fa-share"></i> Share</button>
         <button class="btn   text-secondary hovering_btn"> <i class="far fa-eye-slash"></i> Hide</button>
 
@@ -48,4 +50,5 @@ function displayCard(job) {
     `;
   });
 }
+
 newreq.send(" ");
