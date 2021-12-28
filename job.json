@@ -1,0 +1,64 @@
+{
+  "job": [
+    {
+      "id": 1,
+      "title": "Front End React Native Developer (Hybrid)",
+      "jobTime": "Full Time",
+      "company": "WebOps",
+      "address": "Nasr City, Cairo",
+      "description": "Entry Level · 1+ Yrs of Exp · Males Preferred · Computer Science · React · React Native · Development · Software Development · Information Technology (IT) · Software Engineering · Computer Engineering · Front-End Development · HTML",
+      "deadline": "in 4 days",
+      "image": "1.png"
+    },
+    {
+      "id": 2,
+      "title": "Senior Front End Developer",
+      "jobTime": "Full Time",
+      "company": "Smart Technologies",
+      "address": "Nasr City, Cairo",
+      "description": "Experienced (Non-Manager) · 2-6 Yrs of Exp · 2 Vacancies · Angular · APIs · Computer Science · CSS3 · HTML5 · Vue · Software Development · SEO · RESTful · React · ",
+      "deadline": "in 11 days",
+      "image": "4.png"
+    },
+    {
+      "id": 3,
+      "title": "Vue.Js Front-End Developer",
+      "jobTime": "Full Time",
+      "company": "34ML",
+      "address": "Heliopolis, Cairo",
+      "description": "Entry Level · 1-3 Yrs of Exp · Software Development · Information Technology (IT) · REST · Mobile Development · Objective-C · Software Design · UI · JQuery · AngularJS · JavaScript · ",
+      "deadline": "in 30 days",
+      "image": "2.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Sr. Front End Developer",
+      "jobTime": "Part Time",
+      "company": "Brmaja",
+      "address": "New Cairo, Cairo",
+      "description": "Experienced (Non-Manager) · 4+ Yrs of Exp · CSS3 · CSS · front-end · Information Technology (IT) · JavaScript · Software Development · Computer Science · HTML5 · HTML · React ·  ",
+      "deadline": "in 14 days",
+      "image": "3.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Senior Front End Developer (Angular)",
+      "jobTime": "Part Time",
+      "company": "HorizonTechs",
+      "address": "New Cairo, Cairo",
+      "description": "Experienced (Non-Manager) · 3+ Yrs of Exp · 3 Vacancies · AngularJS · CSS3 · HTML · Information Technology (IT) · Software Development · JavaScript · Computer Science · frontend · senior frontend · IT/Software ",
+      "deadline": "in 4 days",
+      "image": "2.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Senior Front End Developer - (Vue.js)",
+      "jobTime": "Full Time",
+      "company": "Jumia",
+      "address": "Cairo, Egypt",
+      "description": "Experienced (Non-Manager) · 5+ Yrs of Exp · Computer Science · Information Technology (IT) · Software Development · javaScript · HTML · Agile · Frontend · Frameworks · Scrum · Kanban ",
+      "deadline": "in 7 days",
+      "image": "2.jpg"
+    }
+  ]
+}
