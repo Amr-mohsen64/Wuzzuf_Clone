@@ -49,16 +49,20 @@ a {
   color: $blue-300;
 }
 
-.modal-footer .btn {
-  width: 100%;
+.modal-footer {
+  .btn {
+    width: 100%;
+  }
 }
-.app__image img {
-  object-fit: contain;
-  object-position: center center;
-  border-radius: 2px;
-  height: 70px;
-  width: 70px;
-  z-index: 1;
+.app__image {
+  img {
+    object-fit: contain;
+    object-position: center center;
+    border-radius: 2px;
+    height: 70px;
+    width: 70px;
+    z-index: 1;
+  }
 }
 #popover-content {
   width: 100% !important;
@@ -69,27 +73,31 @@ a {
 .popover {
   max-width: 100% !important;
   height: 250px;
-
-  /* Max Width of the popover (depending on the container!) */
 }
 .small__size {
   margin-top: 0px;
   font-size: 12px;
   color: rgb(128, 142, 165);
 }
-.form-switch .form-check-input {
-  height: 30px;
-  width: 50px;
+.form-switch {
+  .form-check-input {
+    height: 30px;
+    width: 50px;
+  }
 }
 .sub_title {
   line-height: 25px;
   margin-bottom: 15px;
   font-size: 14px;
 }
-.subscriptions .form-check-input {
-  width: 18px;
-  height: 18px;
+.subscriptions {
+  .form-check-input {
+    width: 18px;
+    height: 18px;
+  }
 }
-.subscriptions .form-check-input[type="checkbox"] {
-  border-radius: 0.1em;
+.subscriptions {
+  .form-check-input[type="checkbox"] {
+    border-radius: 0.1em;
+  }
 }

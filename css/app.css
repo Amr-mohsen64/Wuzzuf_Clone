@@ -1,3 +1,127 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F6F7;
+}
+
+/*start header*/
+.main-header {
+  padding: 10px;
+  background-color: white;
+  max-height: 52px;
+  box-shadow: -11px 2px 7px -5px rgba(0, 0, 0, 0.75);
+  /*start header left*/
+  /*start header left*/
+  /*start header right*/
+  /*end header right*/
+  /*start settings menue */
+  /*end settings menue */
+}
+.main-header .header-left .wuzzuf-logo svg {
+  width: 125px;
+}
+.main-header .header-left .header-nav ul li {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.main-header .header-left .header-nav ul li.active {
+  border-bottom: 2px solid #0055D9;
+}
+.main-header .header-left .header-nav ul li.active a {
+  color: #0055D9;
+}
+.main-header .header-left .header-nav ul li:hover {
+  color: #0055D9;
+}
+.main-header .header-left .header-nav ul li:hover a {
+  color: #0055D9;
+}
+.main-header .header-left .header-nav ul li a {
+  text-decoration: none;
+  color: #4d6182;
+  padding: 5px 0;
+}
+.main-header .header-right .search {
+  padding: 3px 13px;
+}
+.main-header .header-right .profile-img-btn {
+  width: 32px;
+  cursor: pointer;
+  position: relative;
+}
+.main-header .header-right .profile-img-btn .img-thumbnail {
+  padding: 0;
+  border: 1px solid #4d6182;
+}
+.main-header .header-right .profile-img-btn .menue-btn {
+  position: absolute;
+  top: 15px;
+  right: -1px;
+  border-radius: 50%;
+  font-size: 0.7em;
+  padding: 4px;
+  background-color: white;
+}
+.main-header .profile-settings-menue {
+  background-color: white;
+  position: absolute;
+  top: 53px;
+  right: 3.5%;
+  width: 90%;
+  max-width: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: -1px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  height: 0;
+  transition: height 1s;
+}
+.main-header .profile-settings-menue hr {
+  margin: 0;
+}
+.main-header .profile-settings-menue.profile-settings-menue-showed {
+  height: auto !important;
+}
+.main-header .profile-settings-menue a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.main-header .profile-settings-menue .setting-option:hover {
+  background: #e6efff;
+}
+.main-header .profile-settings-menue .profile-info {
+  padding: 20px 18px;
+}
+.main-header .profile-settings-menue .profile-info .view-profile .user-name {
+  color: #4d6182;
+}
+.main-header .profile-settings-menue .profile-info .view-profile .email {
+  color: #4d6182;
+}
+.main-header .profile-settings-menue .profile-info .view-profile .view-profile-link {
+  color: #0055D9;
+}
+.main-header .profile-settings-menue .setting-links {
+  padding: 10px;
+}
+.main-header .profile-settings-menue .setting-links a {
+  color: #001433;
+  margin-bottom: 11px;
+  padding: 9px 13px;
+}
+.main-header .profile-settings-menue .setting-links a i {
+  margin-right: 15px;
+}
+.main-header .profile-settings-menue .setting-links a:hover {
+  color: #0055D9;
+}
+
+/*end header*/
 a {
   text-decoration: none;
 }
@@ -72,7 +196,6 @@ a {
 .popover {
   max-width: 100% !important;
   height: 250px;
-  /* Max Width of the popover (depending on the container!) */
 }
 
 .small__size {
