@@ -49,8 +49,10 @@ a {
   color: $blue-300;
 }
 
-.modal-footer .btn {
-  width: 100%;
+.modal-footer {
+  .btn {
+    width: 100%;
+  }
 }
 .app__image {
   img {
