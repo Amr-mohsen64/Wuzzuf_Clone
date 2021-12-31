@@ -1,0 +1,156 @@
+/*start header*/
+.main-header {
+    padding: 10px;
+    background-color: white;
+    max-height: 52px;
+    box-shadow: -11px 2px 7px -5px rgba(0, 0, 0, 0.75);
+
+    /*start header left*/
+    .header-left {
+        .wuzzuf-logo {
+            svg {
+                width: 125px;
+            }
+        }
+
+        .header-nav {
+
+            ul {
+                li {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    &.active {
+                        border-bottom: 2px solid $app_main_blue_color;
+
+                        a {
+                            color: $app_main_blue_color;
+                        }
+                    }
+
+                    &:hover {
+                        color: $app_main_blue_color;
+
+                        a {
+                            color: $app_main_blue_color;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $app_gray_color;
+                        padding: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /*start header left*/
+
+    /*start header right*/
+    .header-right {
+        .search {
+            padding: 3px 13px;
+        }
+
+        .profile-img-btn {
+            width: 32px;
+            cursor: pointer;
+            position: relative;
+
+            .img-thumbnail {
+                padding: 0;
+                border: 1px solid $app_gray_color;
+            }
+
+            .menue-btn {
+                position: absolute;
+                top: 15px;
+                right: -1px;
+                border-radius: 50%;
+                font-size: 0.7em;
+                padding: 4px;
+                background-color: white;
+            }
+        }
+    }
+
+    /*end header right*/
+
+    /*start settings menue */
+    .profile-settings-menue {
+        background-color: white;
+        position: absolute;
+        top: 53px;
+        right: 3.5%;
+        width: 90%;
+        max-width: 350px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-shadow: -1px 6px 10px -5px rgba(0, 0, 0, 0.75);
+        height: 0;
+        transition:height 1s ;
+        
+        hr {
+            margin: 0;
+        }
+
+        &.profile-settings-menue-showed {
+            height: auto !important;
+        }
+
+        a {
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        .setting-option:hover {
+            background: rgb(230, 239, 255)
+        }
+
+        .profile-info {
+            padding: 20px 18px;
+
+            .view-profile {
+                .user-name {
+                    color: $app_gray_color;
+                }
+
+                .email {
+                    color: $app_gray_color;
+                }
+
+                .view-profile-link {
+                    color: $app_main_blue_color;
+                }
+            }
+        }
+
+        .setting-links {
+            padding: 10px;
+
+            a {
+                color: #001433;
+                margin-bottom: 11px;
+                padding: 9px 13px;
+
+                i {
+                    margin-right: 15px;
+                }
+
+                &:hover {
+                    color: $app_main_blue_color;
+                }
+            }
+        }
+    }
+
+    /*end settings menue */
+
+}
+
+/*end header*/

@@ -1,104 +1,156 @@
-a {
-  text-decoration: none;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.hovering_btn:hover {
-  background-color: #e9ecef;
-}
-.hovering_btn:active {
-  color: #0d6efd;
+body {
+  background-color: #f5f6f7;
 }
 
-.space__around {
-  width: 2px;
-  height: 32px;
-  background-color: #d9dde4;
-  margin: 0px 12px;
+/*start header*/
+.main-header {
+  padding: 10px;
+  background-color: white;
+  max-height: 52px;
+  -webkit-box-shadow: -11px 2px 7px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: -11px 2px 7px -5px rgba(0, 0, 0, 0.75);
+  /*start header left*/
+  /*start header left*/
+  /*start header right*/
+  /*end header right*/
+  /*start settings menue */
+  /*end settings menue */
 }
 
-.active-color {
+.main-header .header-left .wuzzuf-logo svg {
+  width: 125px;
+}
+
+.main-header .header-left .header-nav ul li {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
   font-weight: bold;
-  border-bottom: 2px solid #0d6efd;
-  height: 36px;
-  padding: 0px 1em;
+  text-transform: uppercase;
 }
 
-.application__search {
-  width: 204px;
-  height: 60px;
+.main-header .header-left .header-nav ul li.active {
+  border-bottom: 2px solid #0055d9;
+}
+
+.main-header .header-left .header-nav ul li.active a {
+  color: #0055d9;
+}
+
+.main-header .header-left .header-nav ul li:hover {
+  color: #0055d9;
+}
+
+.main-header .header-left .header-nav ul li:hover a {
+  color: #0055d9;
+}
+
+.main-header .header-left .header-nav ul li a {
+  text-decoration: none;
+  color: #4d6182;
+  padding: 5px 0;
+}
+
+.main-header .header-right .search {
+  padding: 3px 13px;
+}
+
+.main-header .header-right .profile-img-btn {
+  width: 32px;
   cursor: pointer;
-  border-radius: 4px;
-  border: 1px solid #e9ecef;
-  padding: 4px 8px;
+  position: relative;
 }
 
-.search__icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background-color: #e9ecef;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 0.7em;
+.main-header .header-right .profile-img-btn .img-thumbnail {
+  padding: 0;
+  border: 1px solid #4d6182;
 }
 
-.small__fonts {
-  font-size: 12px;
-  color: #0d6efd;
+.main-header .header-right .profile-img-btn .menue-btn {
+  position: absolute;
+  top: 15px;
+  right: -1px;
+  border-radius: 50%;
+  font-size: 0.7em;
+  padding: 4px;
+  background-color: white;
 }
 
-.modal-footer .btn {
-  width: 100%;
+.main-header .profile-settings-menue {
+  background-color: white;
+  position: absolute;
+  top: 53px;
+  right: 3.5%;
+  width: 90%;
+  max-width: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-box-shadow: -1px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 6px 10px -5px rgba(0, 0, 0, 0.75);
+  height: 0;
+  -webkit-transition: height 1s;
+  transition: height 1s;
 }
 
-.app__image img {
-  object-fit: contain;
-  object-position: center center;
-  border-radius: 2px;
-  height: 70px;
-  width: 70px;
-  z-index: 1;
+.main-header .profile-settings-menue hr {
+  margin: 0;
 }
 
-#popover-content {
-  width: 100% !important;
+.main-header .profile-settings-menue.profile-settings-menue-showed {
+  height: auto !important;
 }
 
-#popover-content {
-  width: 600px;
+.main-header .profile-settings-menue a {
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
-.popover {
-  max-width: 100% !important;
-  height: 250px;
-  /* Max Width of the popover (depending on the container!) */
+.main-header .profile-settings-menue .setting-option:hover {
+  background: #e6efff;
 }
 
-.small__size {
-  margin-top: 0px;
-  font-size: 12px;
-  color: #808ea5;
+.main-header .profile-settings-menue .profile-info {
+  padding: 20px 18px;
 }
 
-.form-switch .form-check-input {
-  height: 30px;
-  width: 50px;
+.main-header .profile-settings-menue .profile-info .view-profile .user-name {
+  color: #4d6182;
 }
 
-.sub_title {
-  line-height: 25px;
-  margin-bottom: 15px;
-  font-size: 14px;
+.main-header .profile-settings-menue .profile-info .view-profile .email {
+  color: #4d6182;
 }
 
-.subscriptions .form-check-input {
-  width: 18px;
-  height: 18px;
+.main-header
+  .profile-settings-menue
+  .profile-info
+  .view-profile
+  .view-profile-link {
+  color: #0055d9;
 }
 
-.subscriptions .form-check-input[type=checkbox] {
-  border-radius: 0.1em;
+.main-header .profile-settings-menue .setting-links {
+  padding: 10px;
 }
 
+.main-header .profile-settings-menue .setting-links a {
+  color: #001433;
+  margin-bottom: 11px;
+  padding: 9px 13px;
+}
+
+.main-header .profile-settings-menue .setting-links a i {
+  margin-right: 15px;
+}
+
+.main-header .profile-settings-menue .setting-links a:hover {
+  color: #0055d9;
+}
+
+/*end header*/
 /*# sourceMappingURL=app.css.map */
