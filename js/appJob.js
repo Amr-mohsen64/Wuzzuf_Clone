@@ -36,7 +36,7 @@ function displayCard(jobData) {
             </div>
         </div>
         <a href="#company" class="mt-4">
-            <img src="../image/${element.image}" alt="" width="75px">
+            <img src="../imgs/company_job/${element.image}" alt="" width="75px">
         </a>
     </header>
     <div class="job__reacts d-flex align-items-center ps-3 mt-1 text-secondary">
