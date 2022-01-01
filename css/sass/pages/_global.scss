@@ -1,21 +1,23 @@
 * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: $body_color;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
+  background-color: $body_color;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
-
 .app_blue_color {
-    color: $app_main_blue_color;
+  color: $app_main_blue_color;
 }
 
 .app_gray_color {
-    color: $app_main_blue_color;
+  color: $app_main_blue_color;
+}
+.app_btn_settings {
+  border: 1px solid $body_color;
 }

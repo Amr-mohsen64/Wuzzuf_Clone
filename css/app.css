@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #F5F6F7;
+  background-color: #f5f6f7;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -12,11 +12,15 @@ body {
 }
 
 .app_blue_color {
-  color: #0055D9;
+  color: #0055d9;
 }
 
 .app_gray_color {
-  color: #0055D9;
+  color: #0055d9;
+}
+
+.app_btn_settings {
+  border: 1px solid #f5f6f7;
 }
 
 /*start header*/
@@ -43,16 +47,16 @@ body {
   text-transform: uppercase;
 }
 .main-header .header-left .header-nav ul li.active {
-  border-bottom: 2px solid #0055D9;
+  border-bottom: 2px solid #0055d9;
 }
 .main-header .header-left .header-nav ul li.active a {
-  color: #0055D9;
+  color: #0055d9;
 }
 .main-header .header-left .header-nav ul li:hover {
-  color: #0055D9;
+  color: #0055d9;
 }
 .main-header .header-left .header-nav ul li:hover a {
-  color: #0055D9;
+  color: #0055d9;
 }
 .main-header .header-left .header-nav ul li a {
   text-decoration: none;
@@ -117,7 +121,7 @@ body {
   color: #4d6182;
 }
 .main-header .profile-settings-menue .profile-info .view-profile .view-profile-link {
-  color: #0055D9;
+  color: #0055d9;
 }
 .main-header .profile-settings-menue .setting-links {
   padding: 10px;
@@ -131,7 +135,7 @@ body {
   margin-right: 15px;
 }
 .main-header .profile-settings-menue .setting-links a:hover {
-  color: #0055D9;
+  color: #0055d9;
 }
 
 /*end header*/
@@ -140,10 +144,10 @@ a {
 }
 
 .hovering_btn:hover {
-  background-color: #F5F6F7;
+  background-color: #f5f6f7;
 }
 .hovering_btn:active {
-  color: #0055D9;
+  color: #0055d9;
 }
 
 .space__around {
@@ -155,17 +159,16 @@ a {
 
 .active-color {
   font-weight: bold;
-  border-bottom: 2px solid #0055D9;
+  border-bottom: 2px solid #0055d9;
   height: 36px;
   padding: 0px 1em;
 }
 
 .application__search {
-  width: 204px;
   height: 60px;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid #F5F6F7;
+  border: 1px solid #d9dde4;
   padding: 4px 8px;
 }
 
@@ -173,7 +176,7 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: #F5F6F7;
+  background-color: #d9dde4;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -182,7 +185,7 @@ a {
 
 .small__fonts {
   font-size: 12px;
-  color: #0055D9;
+  color: #0055d9;
 }
 
 .application__modal .modal-footer .btn {
