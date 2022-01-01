@@ -1,0 +1,114 @@
+//profile pages 
+// by Ahmed Elwakeel
+%sections {
+    background-color: white;
+    border: 1px solid #dcdee0;
+}
+
+.sideminicol {
+    @extend %sections;
+
+    .list-group {
+        border: 0;
+        border-radius: 0;
+
+
+        a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.8);
+
+        }
+
+        .list-group-item {
+            height: 50px;
+            border: none;
+            border-bottom: 1px solid #dcdee0;
+
+            &:hover {
+                background: rgba(235, 232, 232, 0.3);
+
+            }
+        }
+
+        .actived {
+            border-left: 4px solid rgb(56, 56, 212);
+            color: rgb(74, 74, 223);
+        }
+    }
+
+    .sidefonts {
+        margin: 20px;
+
+        h6 {
+            font-weight: 700;
+        }
+
+        p {
+            color: grey;
+            font-size: 14px;
+        }
+    }
+}
+
+.midsection {
+    @extend %sections;
+
+    h5 {
+        margin: 25px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .myform {
+        margin-top: 5px;
+        margin-left: 25px;
+        color: rgb(83, 82, 82);
+        width: 90%;
+        margin-bottom: 15px;
+
+
+
+    }
+
+    .form-control {
+        background-color: rgb(250, 250, 251);
+        border-radius: 0;
+
+    }
+
+    .form-label {
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .interests-font {
+        font-size: 13px;
+    }
+
+    .achievements-font {
+        @extend .interests-font;
+        color: rgb(150, 147, 147);
+    }
+
+    .fa-plus {
+        font-size: 13px;
+        margin-left: 7px;
+
+    }
+
+    .interests-items {
+        background: rgb(228, 225, 225);
+        display: inline;
+        color: rgb(83, 82, 82);
+
+        font-weight: 500;
+        padding: 2px 10px 2px 10px;
+        cursor: pointer;
+        border: 1px solid #dcdee0;
+
+        &:hover {
+            background: rgb(212, 210, 210);
+            border: 2px solid #c0c3c5;
+        }
+    }
+}

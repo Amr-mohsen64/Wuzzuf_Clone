@@ -94,6 +94,7 @@
         box-shadow: -1px 6px 10px -5px rgba(0, 0, 0, 0.75);
         height: 0;
         transition:height 1s ;
+        z-index: 9999;
         
         hr {
             margin: 0;

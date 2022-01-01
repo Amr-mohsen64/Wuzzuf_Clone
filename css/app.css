@@ -5,6 +5,18 @@
 
 body {
   background-color: #F5F6F7;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.app_blue_color {
+  color: #0055D9;
+}
+
+.app_gray_color {
+  color: #0055D9;
 }
 
 /*start header*/
@@ -80,6 +92,7 @@ body {
   box-shadow: -1px 6px 10px -5px rgba(0, 0, 0, 0.75);
   height: 0;
   transition: height 1s;
+  z-index: 9999;
 }
 .main-header .profile-settings-menue hr {
   margin: 0;
@@ -127,10 +140,10 @@ a {
 }
 
 .hovering_btn:hover {
-  background-color: #e9ecef;
+  background-color: #F5F6F7;
 }
 .hovering_btn:active {
-  color: #0d6efd;
+  color: #0055D9;
 }
 
 .space__around {
@@ -142,7 +155,7 @@ a {
 
 .active-color {
   font-weight: bold;
-  border-bottom: 2px solid #0d6efd;
+  border-bottom: 2px solid #0055D9;
   height: 36px;
   padding: 0px 1em;
 }
@@ -152,7 +165,7 @@ a {
   height: 60px;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid #e9ecef;
+  border: 1px solid #F5F6F7;
   padding: 4px 8px;
 }
 
@@ -160,7 +173,7 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: #e9ecef;
+  background-color: #F5F6F7;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -169,10 +182,10 @@ a {
 
 .small__fonts {
   font-size: 12px;
-  color: #0d6efd;
+  color: #0055D9;
 }
 
-.modal-footer .btn {
+.application__modal .modal-footer .btn {
   width: 100%;
 }
 
@@ -186,16 +199,11 @@ a {
 }
 
 #popover-content {
-  width: 100% !important;
-}
-
-#popover-content {
-  width: 600px;
+  width: 800px;
 }
 
 .popover {
-  max-width: 100% !important;
-  height: 250px;
+  max-width: 600px !important;
 }
 
 .small__size {
@@ -222,6 +230,110 @@ a {
 
 .subscriptions .form-check-input[type=checkbox] {
   border-radius: 0.1em;
+}
+
+.alert__container {
+  z-index: 9999;
+  position: fixed;
+  padding: 4px;
+  width: 320px;
+  box-sizing: border-box;
+  color: #fff;
+  right: 1em;
+  top: 80px;
+}
+
+.alert__container .alert__subscrip {
+  border-top: 2px solid #2c9266;
+}
+.alert__container .icon__alert {
+  color: #2c9266;
+}
+
+.career__applied {
+  background-image: url("../../../imgs/company_job/svgimage.svg");
+  background-size: cover;
+  min-height: 308px;
+}
+
+.midsection, .sideminicol {
+  background-color: white;
+  border: 1px solid #dcdee0;
+}
+
+.sideminicol .list-group {
+  border: 0;
+  border-radius: 0;
+}
+.sideminicol .list-group a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+.sideminicol .list-group .list-group-item {
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid #dcdee0;
+}
+.sideminicol .list-group .list-group-item:hover {
+  background: rgba(235, 232, 232, 0.3);
+}
+.sideminicol .list-group .actived {
+  border-left: 4px solid #3838d4;
+  color: #4a4adf;
+}
+.sideminicol .sidefonts {
+  margin: 20px;
+}
+.sideminicol .sidefonts h6 {
+  font-weight: 700;
+}
+.sideminicol .sidefonts p {
+  color: grey;
+  font-size: 14px;
+}
+
+.midsection h5 {
+  margin: 25px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.midsection .myform {
+  margin-top: 5px;
+  margin-left: 25px;
+  color: #535252;
+  width: 90%;
+  margin-bottom: 15px;
+}
+.midsection .form-control {
+  background-color: #fafafb;
+  border-radius: 0;
+}
+.midsection .form-label {
+  font-weight: 600;
+  font-size: 15px;
+}
+.midsection .interests-font, .midsection .achievements-font {
+  font-size: 13px;
+}
+.midsection .achievements-font {
+  color: #969393;
+}
+.midsection .fa-plus {
+  font-size: 13px;
+  margin-left: 7px;
+}
+.midsection .interests-items {
+  background: #e4e1e1;
+  display: inline;
+  color: #535252;
+  font-weight: 500;
+  padding: 2px 10px 2px 10px;
+  cursor: pointer;
+  border: 1px solid #dcdee0;
+}
+.midsection .interests-items:hover {
+  background: #d4d2d2;
+  border: 2px solid #c0c3c5;
 }
 
 /*# sourceMappingURL=app.css.map */
