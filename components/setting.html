@@ -32,10 +32,10 @@
                         </a>
                         <nav class="header-nav col-7">
                             <ul class="d-flex list-unstyled">
-                                <li class="active d-inline-flex"><a href="">explore</a></li>
-                                <li class="d-inline-flex"><a href="">saved</a>
+                                <li class="active d-inline-flex"><a href="../components/explor.html">explore</a></li>
+                                <li class="d-inline-flex"><a href="../components/saved.html">saved</a>
                                 </li>
-                                <li class="d-inline-flex"><a href="">applications</a></li>
+                                <li class="d-inline-flex"><a href="../components/application.html">applications</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -103,7 +103,7 @@
                     <i class="fas fa-envelope"></i>contact Us
                 </a>
                 <hr>
-                <a href="" class="col setting-option">
+                <a href="../components/setting.html" class="col setting-option">
                     <i class="fas fa-cog"></i>Account settings
                 </a>
                 <a href="" class="col setting-option">
@@ -112,7 +112,11 @@
             </div>
         </div>
     </header>
+    <!-- alert -->
+    <div id="alertSubscraption" class="alert__container"></div>
     <!-- page -->
+
+
     <section class="  mt-5  ">
         <div class="col-md-6 offset-md-3 ">
             <div class="card">
@@ -162,21 +166,23 @@
                             enter your new password and confirm it.</p>
                     </div>
                     <form class="row g-3 needs-validation" novalidate>
-                        <div class="col-md-6 mb-3">
-                            <label for="validationCustom03" class="form-label">Current Password :
-                            </label>
-                            <input type="text" class="form-control" id="validationCustom03" required>
-                            <div class="invalid-feedback">
-                                This is a required field
+                        <div class="form-group row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationCustom01" class="form-label">Current Password : </label>
+                                <input type="password" class="form-control bg-light" id="validationCustom01" required>
+                                <div class="invalid-feedback">
+                                    This is a required field
 
+                                </div>
                             </div>
                         </div>
+
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <label for="validationCustomUsername" class="form-label">New Password :
+                                <label for="validationCustom02" class="form-label">New Password :
                                 </label>
                                 <div class="input-group has-validation">
-                                    <input type="text" class="form-control" id="validationCustomUsername"
+                                    <input type="password" class="form-control bg-light" id="validationCustom02"
                                         aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         This is a required field
@@ -185,10 +191,11 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <label for="validationCustom02" class="form-label">Confirm New Email : </label>
-                                <input type="text" class="form-control" id="validationCustom02" required>
-                                <div class="valid-feedback">
-                                    Looks good!
+                                <label for="validationCustom03" class="form-label">Confirm New Email : </label>
+                                <input type="password" class="form-control bg-light" id="validationCustom03" required>
+                                <div class="invalid-feedback">
+                                    This is a required field
+
                                 </div>
                             </div>
                         </div>
@@ -221,7 +228,7 @@
                             <div class="col-md-6">
                                 <label for="validationCustomUsername" class="form-label">New Email : </label>
                                 <div class="input-group has-validation">
-                                    <input type="text" class="form-control" id="validationCustomUsername"
+                                    <input type="text" class="form-control bg-light" id="validationCustomUsername"
                                         aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         This is a required field
@@ -231,9 +238,10 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="validationCustom02" class="form-label">Confirm Password : </label>
-                                <input type="text" class="form-control" id="validationCustom02" required>
-                                <div class="valid-feedback">
-                                    Looks good!
+                                <input type="text" class="form-control bg-light" id="validationCustom02" required>
+                                <div class="invalid-feedback">
+                                    This is a required field
+
                                 </div>
                             </div>
                         </div>
@@ -291,7 +299,7 @@
                         <p class="sub_title">We will email you when employers view your CV or job
                             applications and tips regarding your profile.</p>
                         <div class="">
-                            <button type="submit" class="btn btn-light ">Update
+                            <button type="button" class="btn btn-light " onclick="updatSubscribe()">Update
                                 Subscriptions</button>
                         </div>
                     </div>
@@ -307,12 +315,56 @@
                     see
                     your profile, you can just hide your profile through the above section.</p>
                 <div class="mt-3">
-                    <button type="button" class="btn btn-danger text-white">Delete My
+                    <button type="button" class="btn btn-danger text-white" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Delete My
                         Account</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal__content">
+                    <div class="modal-header">
+                        <h3 class="title">Confirm Account Deletion</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <p class="sub_title text-danger">Note that by deleting your account, you will not be able to
+                                access your account again. This action cannot undone!</p>
+                            <label for="reason" class="">Before you go, please tell us why you are deleting
+                                your
+                                account:</label>
+                            <div class="">
+                                <input id="reason" type="text" class="form-control bg-light"
+                                    label="Before you go, please tell us why you are deleting your account."
+                                    name="reason" value="">
+
+                            </div>
+                            <p class=""><input type="checkbox" id="delete-account-confirmation-check">
+                                <label for="delete-account-confirmation-check" style="user-select: none;">
+                                    I confirm to delete my account.</label>
+                            </p>
+                            <div class="">
+                                <button type="button" class="btn" data-bs-dismiss="modal"
+                                    style="margin-right: 20px;">Cancel</button>
+                                <button type="button" disabled="" class="btn btn-danger">Delete My
+                                    Account</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
@@ -320,7 +372,40 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <script src="../js/header.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
 
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })();
+        // update starter
+        function updatSubscribe() {
+
+            var alert = document.getElementById("alertSubscraption");
+            alert.innerHTML = `
+            <div class="alert alert-light alert-dismissible fade show  alert__subscrip" role="alert">
+                <i class="fas fa-check-circle  icon__alert"></i>
+                     Saved Successfully
+                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            `
+        }
+    </script>
 </body>
 
 </html>
