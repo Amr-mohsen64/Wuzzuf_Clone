@@ -1,15 +1,15 @@
-$gray-300: #e9ecef;
-$blue-300: #0d6efd;
+
+$green-300: #2c9266;
 
 a {
   text-decoration: none;
 }
 .hovering_btn {
   &:hover {
-    background-color: $gray-300;
+    background-color: $body_color;
   }
   &:active {
-    color: $blue-300;
+    color: $app_main_blue_color;
   }
 }
 
@@ -21,7 +21,7 @@ a {
 }
 .active-color {
   font-weight: bold;
-  border-bottom: 2px solid $blue-300;
+  border-bottom: 2px solid $app_main_blue_color;
   height: 36px;
   padding: 0px 1em;
 }
@@ -30,7 +30,7 @@ a {
   height: 60px;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid $gray-300;
+  border: 1px solid $body_color;
   padding: 4px 8px;
 }
 
@@ -38,7 +38,7 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: $gray-300;
+  background-color: $body_color;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -46,14 +46,16 @@ a {
 }
 .small__fonts {
   font-size: 12px;
-  color: $blue-300;
+  color: $app_main_blue_color;
 }
-
-.modal-footer {
-  .btn {
-    width: 100%;
+.application__modal {
+  .modal-footer {
+    .btn {
+      width: 100%;
+    }
   }
 }
+
 .app__image {
   img {
     object-fit: contain;
@@ -64,15 +66,12 @@ a {
     z-index: 1;
   }
 }
+
 #popover-content {
-  width: 100% !important;
-}
-#popover-content {
-  width: 600px;
+  width: 800px;
 }
 .popover {
-  max-width: 100% !important;
-  height: 250px;
+  max-width: 600px !important;
 }
 .small__size {
   margin-top: 0px;
@@ -100,4 +99,27 @@ a {
   .form-check-input[type="checkbox"] {
     border-radius: 0.1em;
   }
+}
+.alert__container {
+  z-index: 9999;
+  position: fixed;
+  padding: 4px;
+  width: 320px;
+  box-sizing: border-box;
+  color: #fff;
+  right: 1em;
+  top: 80px;
+}
+.alert__container {
+  .alert__subscrip {
+    border-top: 2px solid $green-300;
+  }
+  .icon__alert {
+    color: $green-300;
+  }
+}
+.career__applied {
+  background-image: url("../../../imgs/company_job/svgimage.svg");
+  background-size: cover;
+  min-height: 308px;
 }

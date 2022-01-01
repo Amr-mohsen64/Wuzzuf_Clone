@@ -19,7 +19,7 @@ function displayCard(jobData) {
     <header class="job__description d-flex justify-content-between border-bottom mx-2 pb-2">
         <div class="card-body">
             <div>
-                <span class="text-primary"> ${element.title} </span>
+                <span class="app_blue_color"> ${element.title} </span>
                 <i class="badge text-secondary bg-light fw-light"> ${element.jobTime}</i>
                 <p>
                     <a href="#company"> <small class="text-dark fw-normal">${element.company}</small> </a>

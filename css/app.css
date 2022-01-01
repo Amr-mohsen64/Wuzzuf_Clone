@@ -11,6 +11,14 @@ body {
   scroll-behavior: smooth;
 }
 
+.app_blue_color {
+  color: #0055D9;
+}
+
+.app_gray_color {
+  color: #0055D9;
+}
+
 /*start header*/
 .main-header {
   padding: 10px;
@@ -84,6 +92,7 @@ body {
   box-shadow: -1px 6px 10px -5px rgba(0, 0, 0, 0.75);
   height: 0;
   transition: height 1s;
+  z-index: 9999;
 }
 .main-header .profile-settings-menue hr {
   margin: 0;
@@ -131,10 +140,10 @@ a {
 }
 
 .hovering_btn:hover {
-  background-color: #e9ecef;
+  background-color: #F5F6F7;
 }
 .hovering_btn:active {
-  color: #0d6efd;
+  color: #0055D9;
 }
 
 .space__around {
@@ -146,7 +155,7 @@ a {
 
 .active-color {
   font-weight: bold;
-  border-bottom: 2px solid #0d6efd;
+  border-bottom: 2px solid #0055D9;
   height: 36px;
   padding: 0px 1em;
 }
@@ -156,7 +165,7 @@ a {
   height: 60px;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid #e9ecef;
+  border: 1px solid #F5F6F7;
   padding: 4px 8px;
 }
 
@@ -164,7 +173,7 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 20px;
-  background-color: #e9ecef;
+  background-color: #F5F6F7;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -173,10 +182,10 @@ a {
 
 .small__fonts {
   font-size: 12px;
-  color: #0d6efd;
+  color: #0055D9;
 }
 
-.modal-footer .btn {
+.application__modal .modal-footer .btn {
   width: 100%;
 }
 
@@ -190,16 +199,11 @@ a {
 }
 
 #popover-content {
-  width: 100% !important;
-}
-
-#popover-content {
-  width: 600px;
+  width: 800px;
 }
 
 .popover {
-  max-width: 100% !important;
-  height: 250px;
+  max-width: 600px !important;
 }
 
 .small__size {
@@ -226,6 +230,30 @@ a {
 
 .subscriptions .form-check-input[type=checkbox] {
   border-radius: 0.1em;
+}
+
+.alert__container {
+  z-index: 9999;
+  position: fixed;
+  padding: 4px;
+  width: 320px;
+  box-sizing: border-box;
+  color: #fff;
+  right: 1em;
+  top: 80px;
+}
+
+.alert__container .alert__subscrip {
+  border-top: 2px solid #2c9266;
+}
+.alert__container .icon__alert {
+  color: #2c9266;
+}
+
+.career__applied {
+  background-image: url("../../../imgs/company_job/svgimage.svg");
+  background-size: cover;
+  min-height: 308px;
 }
 
 .midsection, .sideminicol {
