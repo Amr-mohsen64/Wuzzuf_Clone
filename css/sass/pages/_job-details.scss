@@ -1,11 +1,4 @@
-body{
-    background-color: #f5f6f7;
-    font-family: Sans,sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.fonti{
+@mixin font_1 {
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -17,6 +10,48 @@ body{
     display: inline-block;
     margin-right: 8px;
 }
+.fonti{
+    @include font_1;
+}
+
+
+.font1{
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: -0.35px;
+    line-height: 22px;
+    color: rgb(0, 20, 51);
+    word-break: break-word;
+}
+.font2{
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: -0.35px;
+    line-height: 22px;
+    color: rgb(0, 20, 51);
+    word-break: break-word;
+}
+.font4{
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.4px;
+    line-height: 24px;
+}
+.font3{
+    font-size: 14px;
+font-weight: 400;
+font-style: normal;
+letter-spacing: -0.35px;
+line-height: 22px;
+color: rgb(0, 20, 51);
+word-break: break-word;
+}
+
+
+
+
 .bigsec{
     position: relative;
     background: rgb(255, 255, 255);
