@@ -4,7 +4,9 @@
 }
 
 body {
-  background-color: #f5f6f7;
+ 
+  background-color: #F5F6F7;
+ 
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
@@ -205,7 +207,10 @@ a {
   width: 40px;
   height: 40px;
   border-radius: 20px;
+ 
   background-color: #d9dde4;
+ 
+ 
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -392,4 +397,45 @@ a {
   background: #d4d2d2;
   border: 2px solid #c0c3c5;
 }
+ 
+
+.regist {
+  margin-top: 3%;
+  border-radius: 0%;
+}
+
+.bodyContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.regist {
+  border-radius: 0%;
+  text-align: left;
+}
+
+.header {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.bodyContactC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+ 
 /*# sourceMappingURL=app.css.map */
