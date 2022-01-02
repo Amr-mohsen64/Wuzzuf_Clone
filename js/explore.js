@@ -5,16 +5,16 @@ var newreq = new XMLHttpRequest();
 newreq.open("GET", "../job.json");
 
 newreq.addEventListener("readystatechange", function () {
-  if (newreq.readyState === 4 && newreq.status === 200) {
-    var data = JSON.parse(newreq.responseText);
-    var jobData = data["job"];
-    displayCard(jobData);
-  }
+    if (newreq.readyState === 4 && newreq.status === 200) {
+        var data = JSON.parse(newreq.responseText);
+        var jobData = data["job"];
+        displayCard(jobData);
+    }
 });
 
 function displayCard(jobData) {
-  jobData.forEach((element) => {
-    ListOfJob.innerHTML += `  
+    jobData.forEach((element) => {
+        ListOfJob.innerHTML += `  
     <div class="job__detail bg-body card bx-1 bt-1 mb-3">
     <header class="job__description d-flex justify-content-between border-bottom mx-2 pb-2">
         <div class="card-body">
@@ -41,14 +41,14 @@ function displayCard(jobData) {
     </header>
     <div class="job__reacts d-flex align-items-center ps-3 mt-1 text-secondary">
         <button class="btn   text-secondary hovering_btn"> <i class="far fa-bookmark"></i> 
-           Save</button>
+        Save</button>
         <button class="btn   text-secondary hovering_btn"> <i class="fas fa-share"></i> Share</button>
         <button class="btn   text-secondary hovering_btn"> <i class="far fa-eye-slash"></i> Hide</button>
 
     </div>
 </div>
     `;
-  });
+    });
 }
 
 newreq.send(" ");
