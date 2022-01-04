@@ -2,3 +2,10 @@ $app_main_blue_color: #0055d9;
 $app_gray_color: #4d6182;
 $body_color: #f5f6f7;
 $app_border_color: #d9dde4;
+
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px);
