@@ -2,7 +2,7 @@ var ListOfJob = document.getElementById("listOfJobs");
 var listSaved = document.getElementById("listSaved");
 var newreq = new XMLHttpRequest();
 
-newreq.open("GET", "../job.json");
+newreq.open("GET", "./job.json");
 
 newreq.addEventListener("readystatechange", function () {
     if (newreq.readyState === 4 && newreq.status === 200) {
