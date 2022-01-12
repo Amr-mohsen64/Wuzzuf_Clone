@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Sign Up | WUZZUF</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/companySignUp.css">
+
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <section class="m-4 ms-5 formSection">
+                    <h3 class="text-primary fw-bolder mb-5">WUZZUF</h3>
+                    <span class="text-secondary fw-bold">Looking for a job?</span>
+                    <a href="#" class="text-decoration-none fw-bold">Sign up as a job seeker</a>
+                    <hr class="w-75">
+                    <h1 class="text-secondary">Create a Company Account to Start Hiring Now</h1>
+                    <p class="text-secondary fs-5 fw-light">14 days free trial. No credit card required.</p>
+                    <form class="mt-5" action="#" onsubmit="signUp(event)">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label text-secondary fw-bold">Business
+                                email</label>
+                            <input type="email" id="email" class="form-control w-75 bg-light" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" required>
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label text-secondary fw-bold">Create your
+                                password</label>
+                            <input type="password" id="password" class="form-control w-75 bg-light"
+                                id="exampleInputPassword1" required>
+                        </div>
+                        <button type="submit"
+                            class="btn btn-primary formSection__button w-75 border-0 rounded-0 p-2">Creat Company
+                            Account</button>
+                    </form>
+                    <span class="text-secondary formSection__span">By signing up you agree to the <a href="#"
+                            class="text-decoration-none ">terms of use</a> and <a href="#"
+                            class="text-decoration-none ">privacy policy</a></span>
+                    <hr class="w-75">
+                    <h6 class="ms-5">Already on WUZZUF? <a href="#" class="text-decoration-none ">Sign in</a></h6>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <img src="img/signin-bg-2e90b9bf0eb96dcf489b0c00bfa7b35e.jpg" class="w-100 h-100">
+            </div>
+        </div>
+    </header>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/companySingUp.js" type="module"></script>
+</body>
+
+</html>
