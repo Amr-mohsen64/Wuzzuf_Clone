@@ -33,6 +33,7 @@ async function CreateCollectionJOB() {
   var city = document.getElementById("city").value;
   var Country = document.getElementById("Country").value;
   var companyname = document.getElementById("companyname").value;
+  var titleJob = document.getElementById("nameOfjob").value;
   var data = {
     companyname: companyname,
     categories: categories,
@@ -40,11 +41,11 @@ async function CreateCollectionJOB() {
     experience: experience,
     city: city,
     Country: Country,
+    titleJob: titleJob,
   };
   console.log(data);
 
   const job = await addDoc(collection(firestore, "jobApplication"), data);
-  console.log(job);
 
   Clear();
 }
@@ -56,4 +57,5 @@ function Clear() {
   document.getElementById("city").value = "";
   document.getElementById("Country").value = "";
   document.getElementById("companyname").value = "";
+  document.getElementById("nameOfjob").value = "";
 }

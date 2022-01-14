@@ -1,42 +1,62 @@
 var ListOfJob = document.getElementById("listOfJobs");
-var listSaved = document.getElementById("listSaved");
-var newreq = new XMLHttpRequest();
-
-newreq.open("GET", "./job.json");
-
-newreq.addEventListener("readystatechange", function () {
-    if (newreq.readyState === 4 && newreq.status === 200) {
-        var data = JSON.parse(newreq.responseText);
-        var jobData = data["job"];
-        displayCard(jobData);
-    }
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import {
+  getFirestore,
+  addDoc,
+  collection,
+  onSnapshot,
+  getDoc,
+  doc,
+  updateDoc,
+  deleteDoc,
+  query,
+  where,
+  getDocs,
+  orderBy,
+} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+const firebaseConfig = {
+  apiKey: "AIzaSyDfeDYHwqseDZAoPxGMzqI8gN9axq1RfP8",
+  authDomain: "wuzzuf-project.firebaseapp.com",
+  projectId: "wuzzuf-project",
+  storageBucket: "wuzzuf-project.appspot.com",
+  messagingSenderId: "468922707390",
+  appId: "1:468922707390:web:fc1f9417234a4487fc9def",
+  measurementId: "G-8GSMJ17PT4",
+};
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
+onSnapshot(collection(firestore, "jobApplication"), (job) => {
+  job.forEach((doc) => {
+    displayCard(doc);
+  });
 });
 
 function displayCard(jobData) {
-    jobData.forEach((element) => {
-        ListOfJob.innerHTML += `  
+  var JobtDatas = jobData.data(jobData);
+  console.log(jobData);
+  ListOfJob.innerHTML += `  
     <div class="job__detail bg-body card bx-1 bt-1 mb-3">
     <header class="job__description d-flex justify-content-between border-bottom mx-2 pb-2">
         <div class="card-body">
             <div>
-                <span class="app_blue_color"> ${element.title} </span>
-                <i class="badge text-secondary bg-light fw-light"> ${element.jobTime}</i>
+                <span class="app_blue_color"> ${JobtDatas.titleJob} </span>
+                <i class="badge text-secondary bg-light fw-light"> ${JobtDatas.timeJob}</i>
                 <p>
-                    <a href="#company"> <small class="text-dark fw-normal">${element.company}</small> </a>
+                    <a href="#company"> <small class="text-dark fw-normal">${JobtDatas.companyname}</small> </a>
                     <span>-</span>
-                    <a href="#location"> <small class="text-secondary "> ${element.address}</small></a>
+                    <a href="#location"> <small class="text-secondary "> ${JobtDatas.Country} , ${JobtDatas.city}</small></a>
                 </p>
 
             </div>
             <div class="text-secondary fs-6">
                 <small>
-                    ${element.description}
+                    ${JobtDatas.categories} . ${JobtDatas.titleJob} . ${JobtDatas.experience} experiance
                 </small>
-                <time class="text-success">${element.deadline}</time>
+                <time class="text-success">1day</time>
             </div>
         </div>
         <a href="#company" class="mt-4">
-            <img src="../imgs/company_job/${element.image}" alt="" width="75px">
+            <img src="../imgs/company_job/download.png" alt="" width="75px">
         </a>
     </header>
     <div class="job__reacts d-flex align-items-center ps-3 mt-1 text-secondary">
@@ -48,7 +68,4 @@ function displayCard(jobData) {
     </div>
 </div>
     `;
-    });
 }
-
-newreq.send(" ");
