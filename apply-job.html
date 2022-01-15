@@ -125,15 +125,16 @@
                     <button class="btn btn-light btn-sm " type="button">View job details</button>
                 </div>
                 <div class="p-3 m-0" style="background-color:white;">
-                    <img class="float-end" src="imgs/company_job/appply_default.png" alt=" ">
-                    <h5 class="text-dark fw-bold">PHP Full Stack Developer / Laravel</h5>
-                    <span style="color: rgb(77, 97, 130);font-size: 13px;letter-spacing: -0.3px;line-height: 20px;">The
-                        hiring team at VadeCom requires you to answer the<br> below questions.</span>
+                    <div id="Apply">
+
+                       
+                    </div>
+                    
                     <div class="mb-3 mt-4">
-                        <label for="formGroupExampleInput" class="form-label fw-bold" style="font-size :13px ;">Why
+                        <label for="formGroupExampleInput"  class="form-label fw-bold" style="font-size :13px ;">Why
                             should we hire you for this position?</label>
                         <div class="form-floating">
-                            <textarea class="form-control" id="floatingInputValue" style="height: 70px"></textarea>
+                            <textarea class="form-control" id="msgPostion" style="height: 70px"></textarea>
                             <label for="floatingInputValue">Write your answer here..</label>
                         </div>
                     </div>
@@ -141,31 +142,29 @@
                         <label for="formGroupExampleInput2" class="form-label fw-bold" style="font-size :13px ;">Can you
                             provide us with a sample of your work?</label>
                         <div class="form-floating">
-                            <textarea class="form-control" id="floatingInputValue" style="height: 70px"></textarea>
+                            <textarea class="form-control" id="sampleWork"style="height: 70px"></textarea>
                             <label for="floatingInputValue">Write your answer here..</label>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label fw-bold" style="font-size :13px ;">Are you
                             willing to start immediately?</label><br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
-                            <label class="form-check-label fw-bold" style="font-size :13px ;"
-                                for="inlineRadio1">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label fw-bold" style="font-size :13px ;"
-                                for="inlineRadio2">No</label>
-                        </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="startWorking" id="inlineRadio1" value="Yes">
+                                    Yes
+                                </label> &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="startWorking" id="inlineRadio2" value="No">
+                                    No
+                                </label>
+                            </div>
                     </div>
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary btn-sm float-end mt-3 m-1"
-                        style="font-size :13px ;">Submit Application</button>
+                    <button type="submit"  onclick="Submitapp()" class="btn btn-primary btn-sm float-end mt-3 m-1"
+                        style="font-size :13px ;" >Submit Application</button>
                     <button type="button" class="btn btn-secondary btn-sm float-end mt-3 m-1"
                         style="font-size :13px ;">Save and Apply later</button>
                     <button type="button" class="btn btn-secondary btn-sm float-start mt-3 m-1 ms-2"
@@ -178,58 +177,11 @@
     <!-- scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/apply-job.js" type="module"></script>
     <script src="js/app.js"></script>
     <script src="js/logout.js" type="module"></script>
 
-    <script type="module">
-        // get the query string in the URL
-        const urlSearchParams = new URLSearchParams(window.location.search);
-        const params = Object.fromEntries(urlSearchParams.entries());
-
-        let jobId =  params['job-id'];
-
-        // onsnap 
-
-        var ListOfJob = document.getElementById("listOfJobs");
-import {
-    initializeApp
-} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import {
-    getFirestore,
-    addDoc,
-    collection,
-    onSnapshot,
-    getDoc,
-    doc,
-    setDoc,
-    updateDoc,
-    deleteDoc,
-    query,
-    where,
-    getDocs,
-    orderBy,
-} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
-
-const firebaseConfig = {
-    apiKey: "AIzaSyDfeDYHwqseDZAoPxGMzqI8gN9axq1RfP8",
-    authDomain: "wuzzuf-project.firebaseapp.com",
-    projectId: "wuzzuf-project",
-    storageBucket: "wuzzuf-project.appspot.com",
-    messagingSenderId: "468922707390",
-    appId: "1:468922707390:web:fc1f9417234a4487fc9def",
-    measurementId: "G-8GSMJ17PT4",
-};
-
-const app = initializeApp(firebaseConfig);
-const firestore = getFirestore(app);
-
-async function test(){
-    const productDataDoc = await getDoc(doc(firestore, 'jobApplication', jobId));
-    console.log(productDataDoc.data());
-}
-
-test()
-    </script>
+ 
 </body>
 
 </html>
