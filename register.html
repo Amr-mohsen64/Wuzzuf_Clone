@@ -5,25 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up | WUZZUF</title>
+    <title>Registeration</title>
     <link rel="icon" href="imgs/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/app.css">
-    
-    <style>
-       
-        .regist {
-            margin-top: 3%;
-        }
 
+    <style>
         body>section {
             background-image: url(imgs/register&login/register-bg-fce3e42828b656fb2b08f69c8e77d62e.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            height: 100%;
-            margin: 0;
-            padding: 0;
+            height: 100vh;
         }
 
         .bodyContactC {
@@ -35,17 +28,17 @@
 <body>
     <section>
         <div class="container">
-            <div style="text-align: left;  margin-left: 15%; ">
-                <p style="color: white;margin-bottom: 0%; font-size: 60px; font-weight: bold;">WUZZUF</p>
+            <div  class="LogoText">
+                <p class="HeaderParagraph">WUZZUF</p>
             </div>
             <div class="bodyContactC">
                 <div class="row col-lg-5 col-sm-7 col-md-7  ">
-                    <div class="card regist  flex-row-revers" style="text-align: center;">
-                        <p class="card-header my-3 header" style="background-color: white;">Sign Up and Start Applying
+                    <div class="card regist  flex-row-revers text-center" >
+                        <p class="card-header my-3 header cardParagraph" >Sign Up and Start Applying
                             For
                             Jobs</p>
 
-                        <div class="card-body m-0">
+                        <div class="card-body">
                             <form class="row g-3 needs-validation" action="#" novalidate>
                                 <div class="col-md-6 col-lg-6">
                                     <label for="validationCustom01" class="form-label d-flex flex-row">First
@@ -59,22 +52,22 @@
                                         placeholder="last name" required>
                                 </div>
                                 <div class="col-md-12 col-lg-12">
-                                    <label for="validationCustom01" class="form-label d-flex flex-row">Email</label>
-                                    <input type="text" class="form-control" id="validationCustom01" name="email"
+                                    <label for="validationCustom03" class="form-label d-flex flex-row">Email</label>
+                                    <input type="text" class="form-control" id="validationCustom03" name="email"
                                         placeholder="email" required />
                                 </div>
                                 <div class="col-md-12 col-lg-12 ">
-                                    <label for="validationCustom02" class="form-label d-flex flex-row">Password</label>
-                                    <input type="password" class="form-control" id="validationCustom02" name="password"
+                                    <label for="validationCustom04" class="form-label d-flex flex-row">Password</label>
+                                    <input type="password" class="form-control" id="validationCustom04" name="password"
                                         placeholder="password" required>
                                 </div>
                                 <div class="col-md-12 col-lg-12">
-                                    <button class="btn btn-primary col-lg-12" type="submit">Sign Up</button>
+                                    <button class="btn btn-primary col-lg-12" type="submit" onclick="RegiterDone(event)">Sign Up</button>
                                 </div>
                                 <hr>
                                 <div class="col-md-12 col-lg-12">
                                     <p>Already on WUZZUF?
-                                        <a href="index.html" style="text-decoration: none ; margin-left: 2px;">Sign
+                                        <a href="index.html" class="anchorsOfForms">Sign
                                             in</a>
                                     </p>
                                 </div>
@@ -93,9 +86,10 @@
     <script>
 
     </script>
-    
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/register.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/register.js" type="module"></script>
 
 </html>

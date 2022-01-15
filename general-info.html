@@ -70,9 +70,9 @@
                     <img class="img-fluid rounded-circle" src="imgs/avatar/member-2.png" alt="avatar">
                 </a>
                 <div class="col-9">
-                    <a class="view-profile d-flex flex-column" href="general-info.html">
-                        <span class="h5 user-name">Amr Mohsen</span>
-                        <span class="email">amrmohsen72@gmail.com</span>
+                    <a class="view-profile d-flex flex-column" href="/profile">
+                        <span class="h5 user-name" id="UserNameSpan"></span>
+                        <span class="email" id="EmailSpan"></span>
                         <span class="view-profile-link">View profile</span>
                     </a>
                 </div>
@@ -103,7 +103,7 @@
                 <a href="settings.html" class="col setting-option">
                     <i class="fas fa-cog"></i>Account settings
                 </a>
-                <a href="" class="col setting-option">
+                <a href="" class="col setting-option" onclick="Logout()">
                     <i class="fas fa-sign-out-alt"></i>logout
                 </a>
             </div>
@@ -410,6 +410,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/logout.js" type="module"></script>
 
 </body>
 

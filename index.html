@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Log in</title>
     <link rel="icon" href="imgs/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/app.css">
 
     <style>
-        .regist {
-            margin-top: 1%;
-        }
-
         body>section {
             background-image: url('imgs/register&login/signin-bg-2e90b9bf0eb96dcf489b0c00bfa7b35e.jpg');
             background-repeat: no-repeat;
@@ -29,13 +25,13 @@
     <section>
         <div class="container ">
             <div class="text-center">
-                <p class="pt-5" style="color: white; font-size: 60px; font-weight: bold;">WUZZUF</p>
+                <p class="pt-5 HeaderParagraph" >WUZZUF</p>
             </div>
             <div class="bodyContactC ">
                 <div class="row col-lg-4 col-sm-6 col-md-7 ">
 
-                    <div class="card regist col-12 " style="text-align: center; ">
-                        <p class="card-header my-3 header col-md-12 col-lg-12" style="background-color: white;">
+                    <div class="card regist col-12 text-center" >
+                        <p class="card-header my-3 header col-md-12 col-lg-12 cardParagraph" >
                             Welcome Back
                         </p>
 
@@ -52,14 +48,19 @@
                                         placeholder="password" required>
                                 </div>
                                 <div class="col-md-12 col-lg-12 col-sm-8">
-                                    <button class="btn btn-primary col-lg-12" type="submit">Sign Up</button>
+                                    <button class="btn btn-primary col-lg-12" type="submit" onclick="LoginDone(event)">Sign Up</button>
                                 </div>
                                 <hr>
                                 <div class="col-md-12 col-lg-12 col-sm-8">
                                     <p>New to WUZZUF?
-                                        <a href="register.html" style="text-decoration: none ; margin-left: 2px;">Join
+                                        <a href="register.html" class="anchorsOfForms">Join
                                             us</a>
                                     </p>
+                                    <div class="col-md-12 col-lg-12">
+                                        <span style="font-size: 13px;">Looking to post jobs?</span>
+                                            <a  href="company-signUp/companySignUp.html" style="text-decoration: none ;font-size:12px; margin-left: 2px;">
+                                                Create an Employer Account.</a>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -72,6 +73,7 @@
     
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/register.js"></script>
+    <script src="js/login.js" type="module"></script>
+    <script src="js/validation.js"></script>
 
 </html>

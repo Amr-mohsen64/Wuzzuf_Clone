@@ -1,24 +1,18 @@
-// ---------------------------------------------------------------------------------------------
-//Authentications
-window.LoginDone = LoginDone;
-function LoginDone(event) {
-  event.preventDefault();
-  var Email = document.getElementById("validationCustom01").value;
-  var Password = document.getElementById("validationCustom02").value;
-  try {
-    Login(Email, Password);
-  } catch (e) {
-    console.log(e.message);
-  }
-}
+// ---------------------------------------------------------------------------------------------------
+// Authentication
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-analytics.js";
 import {
   getAuth,
-  signInWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-auth.js";
+import {
+  getFirestore,
+  collection,
+  onSnapshot,
+} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -37,15 +31,33 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const auth = getAuth();
-
-function Login(Email, Password) {
-  signInWithEmailAndPassword(auth, Email , Password).catch((error) => {
-    console.log(error.message);
-    alert("Email or Password is wrong");
-  });
-}
+const auth = getAuth(app);
+const firestore = getFirestore(app);
 
 onAuthStateChanged(auth, (user) => {
-  if (user) location.assign("../explore.html");
+  if (user) {
+    onSnapshot(collection(firestore, "Users"), (snapshot) => {
+      snapshot.forEach((doc) => {
+        ShowData(doc);
+      });
+    });
+
+    function ShowData(User) {
+      var UserData = User.data();
+      console.log(UserData.Email);
+      console.log(UserData.Email == user.email)
+      console.log(document.getElementById("UserNameSpan"))
+      if (UserData.Email == user.email) {
+        document.getElementById("UserNameSpan").innerHTML += UserData.FirstName + " " + UserData.LastName ;
+        document.getElementById("EmailSpan").innerHTML += UserData.Email ;
+      }
+    }
+  } else {
+    location.assign("../index.html");
+  }
 });
+
+window.Logout = Logout;
+function Logout() {
+  signOut(auth);
+}

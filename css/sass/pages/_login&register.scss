@@ -1,7 +1,9 @@
 .regist {
     border-radius: 0%;
-    text-align: left; 
+    text-align: left;
+    margin-top: 3%;
 }
+
 .header {
     font-size: 20px;
     margin-bottom: 20px;
@@ -11,4 +13,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.HeaderParagraph {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.anchorsOfForms {
+    text-decoration: none;
+    margin-left: 2px;
+}
+
+.cardParagraph {
+    background-color: white;
+}
+
+.LogoText {
+    text-align: left;
+    margin-left: 15%;
 }
