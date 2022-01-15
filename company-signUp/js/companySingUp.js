@@ -40,7 +40,7 @@ const firestore = getFirestore(app);
 function Register(email, password) {
   createUserWithEmailAndPassword(auth, email, password)
     .then(() => {
-      // addtoFireStore().then(location.assign("./dashboard.html"));
+      addtoFireStore().then(location.assign("./dashboard.html"));
     })
     .catch((error) => {
       console.log(error.message);
