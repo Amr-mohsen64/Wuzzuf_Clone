@@ -39,8 +39,9 @@ onSnapshot(collection(firestore, "jobApplication"), (job) => {
 
 function displayCard(jobData) {
     var JobtDatas = jobData.data(jobData);
-    // console.log(JobtDatas);
-    ListOfJob.innerHTML += `  
+    // console.log();
+    ListOfJob.innerHTML += `
+    <a href="apply-job.html?job-id=${jobData.id}">
     <div class="job__detail bg-body card bx-1 bt-1 mb-3">
     <header class="job__description d-flex justify-content-between border-bottom mx-2 pb-2">
         <div class="card-body">
@@ -73,6 +74,7 @@ function displayCard(jobData) {
 
     </div>
 </div>
+    </a>
     `;
 }
 

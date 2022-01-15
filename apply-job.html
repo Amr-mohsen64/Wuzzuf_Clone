@@ -179,6 +179,56 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/header.js"></script>
     <script src="js/app.js"></script>
+
+    <script type="module">
+        // get the query string in the URL
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        const params = Object.fromEntries(urlSearchParams.entries());
+
+        let jobId =  params['job-id'];
+
+        // onsnap 
+
+        var ListOfJob = document.getElementById("listOfJobs");
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import {
+    getFirestore,
+    addDoc,
+    collection,
+    onSnapshot,
+    getDoc,
+    doc,
+    setDoc,
+    updateDoc,
+    deleteDoc,
+    query,
+    where,
+    getDocs,
+    orderBy,
+} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDfeDYHwqseDZAoPxGMzqI8gN9axq1RfP8",
+    authDomain: "wuzzuf-project.firebaseapp.com",
+    projectId: "wuzzuf-project",
+    storageBucket: "wuzzuf-project.appspot.com",
+    messagingSenderId: "468922707390",
+    appId: "1:468922707390:web:fc1f9417234a4487fc9def",
+    measurementId: "G-8GSMJ17PT4",
+};
+
+const app = initializeApp(firebaseConfig);
+const firestore = getFirestore(app);
+
+async function test(){
+    const productDataDoc = await getDoc(doc(firestore, 'jobApplication', jobId));
+    console.log(productDataDoc.data());
+}
+
+test()
+    </script>
 </body>
 
 </html>
