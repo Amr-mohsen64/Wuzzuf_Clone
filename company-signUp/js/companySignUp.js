@@ -1,5 +1,4 @@
 window.signUp = signUp;
-
 function signUp(ev) {
    ev.preventDefault();
    var email = document.getElementById("email").value;
@@ -50,13 +49,6 @@ function Register(email, password) {
    })
 }
 
-  //    onAuthStateChanged(auth,(companyUser)=>{
-   //       if(companyUser){
-            
-   //       }
-         
-   //   })
-
 window.addtoFireStore = addtoFireStore;
 async function addtoFireStore() {
    var email = document.getElementById("email").value;
@@ -68,3 +60,12 @@ async function addtoFireStore() {
    await addDoc(collection(firestore, 'company'), data);
 
 }
+
+
+
+
+
+
+
+
+
