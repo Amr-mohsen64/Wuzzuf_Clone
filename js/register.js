@@ -1,20 +1,80 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-    'use strict'
+// -------------------------------------------------------------------------------------------
+//Authentications
+window.RegiterDone = RegiterDone;
+function RegiterDone(event) {
+  event.preventDefault();
+  var FirstName = document.getElementById("validationCustom01").value;
+  var LastName = document.getElementById("validationCustom02").value;
+  var Email = document.getElementById("validationCustom03").value;
+  var Password = document.getElementById("validationCustom04").value;
+  try {
+    Register(Email, Password, FirstName, LastName);
+  } catch (e) {
+    alert(e);
+  }
+}
 
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-analytics.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-auth.js";
+import {
+  getFirestore,
+  addDoc,
+  collection,
+} from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-            form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDfeDYHwqseDZAoPxGMzqI8gN9axq1RfP8",
+  authDomain: "wuzzuf-project.firebaseapp.com",
+  projectId: "wuzzuf-project",
+  storageBucket: "wuzzuf-project.appspot.com",
+  messagingSenderId: "468922707390",
+  appId: "1:468922707390:web:fc1f9417234a4487fc9def",
+  measurementId: "G-8GSMJ17PT4",
+};
 
-                form.classList.add('was-validated')
-            }, false)
-        })
-})()
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const firestore = getFirestore(app);
+const auth = getAuth();
+
+function Register(Email, Password, FirstName, LastName) {
+  createUserWithEmailAndPassword(auth, Email, Password, FirstName, LastName)
+  .then(() => {
+    AddUserDocument(Email, Password, FirstName, LastName)
+    .then(
+      (location.assign("../explore.html"))
+    )
+  })
+    
+    .catch((error) => {
+      console.log(error.message);
+    });
+}
+
+
+window.AddUserDocument = AddUserDocument;
+async function AddUserDocument(Email, Password, FirstName, LastName) {
+  console.log(Email, Password, FirstName, LastName);
+  var data = {
+    Email: Email,
+    FirstName: FirstName,
+    LastName: LastName,
+    Birthday: null,
+    Gender: null,
+    MilitaryStatus: null,
+    MaritalStatus: null,
+    DrivingLicense: false,
+  };
+  await addDoc(collection(firestore, "Users"), data);
+}

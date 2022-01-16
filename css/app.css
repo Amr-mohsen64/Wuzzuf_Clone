@@ -351,6 +351,11 @@ a {
   min-height: 308px;
 }
 
+.save-active {
+  color: #0055d9 !important;
+  font-weight: bold;
+}
+
 .sideminicol, .midsection {
   background-color: white;
   border: 1px solid #dcdee0;
@@ -466,6 +471,7 @@ a {
 .regist {
   border-radius: 0%;
   text-align: left;
+  margin-top: 3%;
 }
 
 .header {
@@ -483,6 +489,26 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.HeaderParagraph {
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.anchorsOfForms {
+  text-decoration: none;
+  margin-left: 2px;
+}
+
+.cardParagraph {
+  background-color: white;
+}
+
+.LogoText {
+  text-align: left;
+  margin-left: 15%;
 }
 
 .fonti {

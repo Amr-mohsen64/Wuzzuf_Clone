@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Dashboard</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"> Add job </a>
+
+    </div>
+</nav>
+<br>
+<div class="container-fluid" style="width:70%">
+
+    <div class="form-group">
+        <label for="City" class="col-form-label">Company name </label><br>
+        <input type="text" class="form-control" placeholder="Company name" id="companyname" />
+    </div>
+
+    <div class="form-group">
+        <label for="City" class="col-form-label">Where company is located </label><br>
+        <select class="form-control form-select" id="Country" name="Country">
+
+            <option> Egypt </option>
+            <option> Albania </option>
+            <option> Canada </option>
+            <option> Germany </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="City" class="col-form-label">Where company city is located </label><br>
+        <select class="form-control form-select" id="city" name="city">
+            <option> NA </option>
+            <option> Cairo </option>
+            <option> Mohandessin </option>
+            <option> Alexandria</option>
+            <option> Aswan</option>
+            <option> Giza</option>
+            <option>6th of Octobe</option>
+            <option> Sheikh Zayed </option>
+            <option>New Cairo </option>
+            <option> Kafr Alsheikh</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="City" class="col-form-label">How many years of experience do you have? </label><br>
+        <select class="form-control form-select" id="experience">
+            <option>No Experience</option>
+            <option>less than one year </option>
+            <option>1 year</option>
+            <option>2 year</option>
+            <option>3 year</option>
+            <option>4 year</option>
+            <option>5 year</option>
+            <option>6 year</option>
+            <option>7 year</option>
+            <option>8 year</option>
+            <option>9 year</option>
+            <option>more than 9 year</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="City" class="col-form-label"> Job Title</label> <br>
+        <select class="form-control form-select" id="nameOfjob">
+            <option>Front End React Native Develope</option>
+            <option>Senior Front End Developer </option>
+            <option>Vue.Js Front-End Developer</option>
+            <option>Sr. Front End Developer</option>
+            <option>Senior Front End Developer (Angular)</option>
+            <option>Senior Front End Developer - (Vue.js)</option>
+            <option>Front End Developer (WordPress)</option>
+            <option>UI/UX Designer</option>
+            <option>Full Stack Developer (ADF/Angular)</option>
+            <option>Senior Back End Developer Node JS</option>
+            <option>Temporal Developer</option>
+            <option>Senior Javascript Developer</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="City" class="col-form-label">What type of job are you open to? </label><br>
+        <select class="form-control form-select" id="timeJob" name="timeJob">
+            <option>Full Time </option>
+            <option>part Time</option>
+            <option> Shift Based</option>
+            <option> Work From Home </option>
+            <option>Volunteering </option>
+            <option> Student Activity </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="City" class="col-form-label">What job categories are you want to apply? </label><br>
+        <select class="form-control form-select" id="categories">
+
+            <option>Engineering</option>
+
+            <option> IT/Software Development </option>
+
+            <option>Customer Service/Support </option>
+
+            <option> Business Development </option>
+
+            <option> Creative/Design/Art </option>
+
+            <option> Project/Program Management </option>
+
+            <option> Purchasing/Procurement </option>
+
+            <option> Sales/Retail </option>
+            <option>Animation</option>
+            <option>Computer Games</option>
+            <option>Computer Hardware</option>
+            <option>Computer Software</option>
+            <option> Online Media</option>
+            <option> Alternative Medicine</option>
+            <option> Computer and Network Security</option>
+            <option> Electronics and Semiconductors</option>
+            <option> Environmental Services</option>
+            <option> Human Resources </option>
+            <option> Other </option>
+
+        </select>
+    </div>
+    <br>
+    <button type="button" class="btn btn-success" onclick="CreateCollectionJOB()">Save</button>
+
+</div>
+
+<body>
+
+
+
+    <script src="js/dashbord.js" type="module"></script>
+</body>
+
+</html>
