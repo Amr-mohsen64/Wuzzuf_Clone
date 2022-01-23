@@ -1,4 +1,4 @@
-# Wuzzuf_Cone
+# Wuzzuf_Clone web app with native js
 wuzzuf clone website
 
 # live link
